@@ -74,7 +74,7 @@ public class PessoaDao {
 		}
 	}
 	
-	public static void atualizaPessoa(int id, String email) {
+	public static void atualizaPessoa(int id, String email, String nome) {
 		Connection conexao = null;
 		PreparedStatement st = null;
 		
@@ -82,7 +82,7 @@ public class PessoaDao {
 			conexao = BancoDados.getConexao();
 			
 			st = conexao.prepareStatement("UPDATE pessoa"
-					+ "SET email = ?"
+					+ "SET email = ?, nome = ?"
 					+ " WHERE id = ?");
 			
 			st.setString(1, email);

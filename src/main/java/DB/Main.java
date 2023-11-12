@@ -9,22 +9,12 @@ public class Main {
 	public static void main(String[] args) {
 		PessoaDao dao = new PessoaDao();
 		
-		Pessoa p = new Pessoa();
+		dao.atualizaPessoa(3, "rafaelamonteroxo@gmail.com");
 		
-		p.setNome("Danilo Gentili");
-		p.setEmail("daninho@montinegro.com.br");
-		p.setIdade(58);
-		
-		try {
-			dao.inserePessoa(p);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		List<Pessoa> pessoas = dao.getPessoas();
+		/*List<Pessoa> pessoas = dao.getPessoas();
 		
 		for(Pessoa pessoa : pessoas) {
 			System.out.println("Nome da pessoa: " + pessoa.getNome());
-		}
+		}*/
 	}
 }
